@@ -4,12 +4,10 @@ import './List.css';
 
 export default function List() {
   const { cards } = useCards();
-  console.log(cards);
   return (
-    <div>
-      <h1>List</h1>
+    <div className="list-container">
       {cards.map((card) => (
-        <img key={card.id} src={card.imageUrl} />
+        <img className="card-img" key={card.id} src={card.imageUrl} />
       ))}
     </div>
   );
